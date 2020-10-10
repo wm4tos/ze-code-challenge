@@ -32,5 +32,11 @@ module.exports = {
       },
     ],
   },
+  resolve: {
+    alias: {
+      config: path.resolve(__dirname, 'config'),
+      services: path.resolve(__dirname, 'src', 'services'),
+    },
+  },
   plugins,
 }
