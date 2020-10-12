@@ -1,4 +1,8 @@
 module.exports = {
+  parser: 'babel-eslint',
+  parserOptions: {
+    allowImportExportEverywhere: true,
+  },
   plugins: [
     'jest',
     'security',
