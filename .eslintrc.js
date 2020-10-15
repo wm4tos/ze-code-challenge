@@ -20,7 +20,7 @@ module.exports = {
     'import/extensions': 2,
     'import/no-unresolved': 2,
     'react/jsx-filename-extension': 0,
-    'import/prefer-default-export': 1,
+    'import/prefer-default-export': 0,
     'max-len': [
       2,
       {
