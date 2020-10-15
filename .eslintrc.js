@@ -27,6 +27,9 @@ module.exports = {
         code: 135,
       },
     ],
+    'jsx-a11y/aria-role': [2, {
+      ignoreNonDOM: true,
+    }],
   },
   env: {
     'jest/globals': true,
