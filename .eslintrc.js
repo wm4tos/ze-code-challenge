@@ -10,15 +10,13 @@ module.exports = {
     'simple-import-sort',
   ],
   extends: [
-    'airbnb-base',
+    'airbnb',
     'plugin:security/recommended',
     'plugin:react/recommended',
   ],
   rules: {
     semi: ['error', 'never'],
     'simple-import-sort/sort': 'error',
-    'import/extensions': 2,
-    'import/no-unresolved': 2,
     'react/jsx-filename-extension': 0,
     'import/prefer-default-export': 0,
     'max-len': [
@@ -34,6 +32,8 @@ module.exports = {
   env: {
     'jest/globals': true,
     browser: true,
+    node: true,
+    es6: true,
   },
   settings: {
     'import/resolver': {
