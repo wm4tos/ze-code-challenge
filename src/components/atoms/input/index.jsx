@@ -49,7 +49,7 @@ const Input = ({
 }
 
 Input.propTypes = {
-  onChange: PropTypes.func,
+  onChange: PropTypes.func.isRequired,
   placeholder: PropTypes.string,
   errorMessage: PropTypes.string,
   id: PropTypes.string.isRequired,
@@ -63,7 +63,6 @@ Input.propTypes = {
 Input.defaultProps = {
   placeholder: '',
   errorMessage: '',
-  onChange: () => {},
   autoCapitalize: 'none',
   containerStyle: {},
 }
