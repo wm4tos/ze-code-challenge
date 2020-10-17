@@ -28,6 +28,7 @@ module.exports = {
     'jsx-a11y/aria-role': [2, {
       ignoreNonDOM: true,
     }],
+    'react/jsx-props-no-spreading': 'off',
   },
   env: {
     'jest/globals': true,
