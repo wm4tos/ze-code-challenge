@@ -29,6 +29,7 @@ module.exports = {
       ignoreNonDOM: true,
     }],
     'react/jsx-props-no-spreading': 'off',
+    'import/no-extraneous-dependencies': ['error', { devDependencies: ['**/setupTests.js', '**/*.spec.jsx', '*.config.js'] }],
   },
   env: {
     'jest/globals': true,
