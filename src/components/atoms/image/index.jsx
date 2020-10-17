@@ -2,11 +2,13 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import LazyLoad from 'react-lazyload'
 
+import * as styles from './styles'
+
 const Image = ({
   src, alt, caption, height, imageStyle, isLazyLoaded, ...props
 }) => {
   const renderImage = () => (
-    <figure>
+    <figure css={styles.imageBase}>
       {<img {...props} height={height} css={imageStyle} src={src} alt={alt} />}
       {caption && <figcaption>{caption}</figcaption>}
     </figure>
