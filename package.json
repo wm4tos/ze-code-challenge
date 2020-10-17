@@ -6,7 +6,9 @@
   "scripts": {
     "start": "npx webpack-dev-server --inline --hot",
     "build": "npx webpack",
-    "test": "npx jest"
+    "test": "npx jest",
+    "lint": "npx eslint .",
+    "lint:fix": "npx eslint . --fix"
   },
   "keywords": [],
   "author": "",
