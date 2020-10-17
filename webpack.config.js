@@ -7,7 +7,10 @@ const environmentVariables = dotenv.config({ path: '.env' }).parsed || {}
 
 const plugins = []
 
-const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'public', 'index.html') })
+const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
+  template: path.resolve(__dirname, 'public', 'index.html'),
+  favicon: path.resolve(__dirname, 'public', 'logo.png'),
+})
 const envPlugin = new webpack.DefinePlugin({
   'process.env': JSON.stringify(environmentVariables),
 })
