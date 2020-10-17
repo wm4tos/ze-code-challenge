@@ -1,4 +1,4 @@
-import Image from 'molecules/images'
+import Image from 'atoms/image'
 import PropTypes from 'prop-types'
 import React from 'react'
 
