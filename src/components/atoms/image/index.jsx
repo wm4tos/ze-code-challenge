@@ -5,10 +5,10 @@ import LazyLoad from 'react-lazyload'
 import * as styles from './styles'
 
 const Image = ({
-  src, alt, caption, height, imageStyle, isLazyLoaded, ...props
+  src, alt, caption, height, imageStyle, containerStyle, isLazyLoaded, ...props
 }) => {
   const renderImage = () => (
-    <figure css={styles.imageBase}>
+    <figure css={[styles.imageBase, containerStyle]}>
       {<img {...props} height={height} css={imageStyle} src={src} alt={alt} />}
       {caption && <figcaption>{caption}</figcaption>}
     </figure>
@@ -23,6 +23,7 @@ Image.propTypes = {
   height: PropTypes.number,
   src: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
+  containerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   imageStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
 }
 
@@ -31,6 +32,7 @@ Image.defaultProps = {
   imageStyle: {},
   isLazyLoaded: false,
   height: 100,
+  containerStyle: {},
 }
 
 export default Image
