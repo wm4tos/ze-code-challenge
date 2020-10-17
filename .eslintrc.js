@@ -43,8 +43,9 @@ module.exports = {
       },
       alias: {
         map: [
-          ['services', './src/services'],
           ['config', './config'],
+          ['services', './src/services'],
+          ['constants', './src/constants'],
         ],
       },
     },

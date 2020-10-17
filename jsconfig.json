@@ -3,7 +3,8 @@
     "baseUrl": ".",
     "paths": {
       "config/*": ["./config/*"],
-      "services/*": ["./src/services/*"]
+      "services/*": ["./src/services/*"],
+      "constants/*": ["./src/constants/*"],
     }
   },
   "exclude": ["node_modules", "build"]

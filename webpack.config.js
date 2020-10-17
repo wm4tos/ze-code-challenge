@@ -42,6 +42,7 @@ module.exports = {
     alias: {
       config: path.resolve(__dirname, 'config'),
       services: path.resolve(__dirname, 'src', 'services'),
+      constants: path.resolve(__dirname, 'src', 'constants'),
     },
   },
   plugins,
