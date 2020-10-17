@@ -1,7 +1,6 @@
+import Image from 'molecules/images'
 import PropTypes from 'prop-types'
 import React from 'react'
-
-import Image from './image'
 
 const Logo = ({ height, ...props }) => (
   <Image
