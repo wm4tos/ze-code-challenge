@@ -14,6 +14,7 @@ const Input = ({
   placeholder,
   errorMessage,
   autoCapitalize,
+  containerStyle,
   rightIcon,
   dataTestId,
   ...props
@@ -23,7 +24,7 @@ const Input = ({
   const handleChange = ({ target }) => onChange(target.value)
 
   return (
-    <div css={[style.inputBaseContainer]}>
+    <div css={[style.inputBaseContainer, containerStyle]}>
       {leftIcon}
       <input
         id={id}
@@ -55,6 +56,7 @@ Input.propTypes = {
   dataTestId: PropTypes.string.isRequired,
   autoCapitalize: PropTypes.string,
   name: PropTypes.string.isRequired,
+  containerStyle: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
 }
 
@@ -63,6 +65,7 @@ Input.defaultProps = {
   errorMessage: '',
   onChange: () => {},
   autoCapitalize: 'none',
+  containerStyle: {},
 }
 
 export default Input
