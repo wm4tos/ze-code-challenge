@@ -73,6 +73,11 @@ export const FONT_WEIGHT = {
   medium: 500,
 }
 
+export const GRID = {
+  gap: MARGIN_PADDING.tiny,
+  columns: '1fr 1fr 1fr 1fr',
+}
+
 export const ANIMATION_DURATION = 300
 export const ANIMATION_TIMING = 'cubic-bezier(0.75, 0.02, 0.5, 1)'
 export const ICON_SIZE = 24
