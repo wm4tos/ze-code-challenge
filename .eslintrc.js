@@ -40,19 +40,8 @@ module.exports = {
   settings: {
     'import/resolver': {
       node: {
+        paths: ['src', 'config', 'src/services', 'src/constants', 'src/components'],
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
-      },
-      alias: {
-        map: [
-          ['config', './config'],
-          ['services', './src/services'],
-          ['constants', './src/constants'],
-          ['atoms', './src/components/atoms'],
-          ['molecules', './src/components/molecules'],
-          ['organisms', './src/components/organisms'],
-          ['pages', './src/components/pages'],
-          ['templates', './src/components/templates'],
-        ],
       },
     },
     'import/extensions': [
