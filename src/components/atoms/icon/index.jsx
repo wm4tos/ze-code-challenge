@@ -10,13 +10,15 @@ const Icon = ({ name, size }) => {
     const iconName = toPascalCase(name)
     const [group] = name.match(/^\w./)
 
+    const lowerCaseGroup = group.toLowerCase()
+
     const getter = module => {
       const Icon = module[iconName]
 
       return <Icon size={size} />
     }
 
-    import(`react-icons/${group}/index.js`).then(getter).then(setIcon)
+    import(`react-icons/${lowerCaseGroup}/index.js`).then(getter).then(setIcon)
   }, [name])
 
   return <LazyLoad height={size}>{icon}</LazyLoad>
