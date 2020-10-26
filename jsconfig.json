@@ -5,7 +5,6 @@
       "config/*": ["./config/*"],
       "services/*": ["./src/services/*"],
       "constants/*": ["./src/constants/*"],
-      "components/*": ["./src/components/*"],
       "atoms/*": ["./src/components/atoms/*"],
       "molecules/*": ["./src/components/molecules/*"],
       "organisms/*": ["./src/components/organisms/*"],
