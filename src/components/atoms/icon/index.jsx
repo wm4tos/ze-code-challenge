@@ -1,9 +1,12 @@
+import { COLORS } from 'constants/theme'
 import PropTypes from 'prop-types'
 import React, { useEffect, useState } from 'react'
 import LazyLoad from 'react-lazyload'
 import { toPascalCase } from 'services/utils/string'
 
-const Icon = ({ name, size }) => {
+import * as styles from './styles'
+
+const Icon = ({ name, size, color }) => {
   const [icon, setIcon] = useState(() => <div />)
 
   useEffect(() => {
@@ -15,7 +18,7 @@ const Icon = ({ name, size }) => {
     const getter = module => {
       const Icon = module[iconName]
 
-      return <Icon size={size} />
+      return <Icon size={size} css={styles.changeColor(color)} />
     }
 
     import(`react-icons/${lowerCaseGroup}/index.js`).then(getter).then(setIcon)
@@ -27,10 +30,12 @@ const Icon = ({ name, size }) => {
 Icon.propTypes = {
   name: PropTypes.string.isRequired,
   size: PropTypes.number,
+  color: PropTypes.string,
 }
 
 Icon.defaultProps = {
   size: 16,
+  color: COLORS.black
 }
 
 export default Icon
