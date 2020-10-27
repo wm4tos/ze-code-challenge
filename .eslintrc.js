@@ -38,12 +38,7 @@ module.exports = {
     es6: true,
   },
   settings: {
-    'import/resolver': {
-      node: {
-        paths: ['src', 'config', 'src/services', 'src/constants', 'src/components'],
-        extensions: ['.js', '.jsx', '.ts', '.tsx'],
-      },
-    },
+    'import/resolver': 'webpack',
     'import/extensions': [
       '.js',
       '.jsx',
