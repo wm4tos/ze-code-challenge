@@ -13,7 +13,6 @@ const mediaQueries = facepaint([
 
 export const containerBaseStyle = css`
   ${mediaQueries({
-    margin: '0 auto',
     maxWidth: [1200, '100%', '100%', '100%', 1200],
     width: '100%',
   })}
