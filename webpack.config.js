@@ -49,6 +49,7 @@ module.exports = {
       organisms: path.resolve(__dirname, 'src', 'components', 'organisms'),
       pages: path.resolve(__dirname, 'src', 'components', 'pages'),
       templates: path.resolve(__dirname, 'src', 'components', 'templates'),
+      ducks: path.resolve(__dirname, 'src', 'store', 'ducks'),
     },
     extensions: ['.js', '.jsx'],
   },

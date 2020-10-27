@@ -10,6 +10,7 @@
       "organisms/*": ["./src/components/organisms/*"],
       "pages/*": ["./src/components/pages/*"],
       "templates/*": ["./src/components/templates/*"],
+      "ducks/*": ["./src/store/ducks/*"],
     }
   },
   "exclude": ["node_modules", "build"]
