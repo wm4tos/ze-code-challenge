@@ -1,10 +1,11 @@
 import { COLORS } from 'constants/theme'
 import IconTooltip from 'molecules/icon-tooltip'
+import PropTypes from 'prop-types'
 import React from 'react'
 
 import * as styles from './styles'
 
-const Nav = () => {
+const Nav = ({ containerStyle }) => {
   const LINKS = {
     in: 'https://www.linkedin.com/in/wricke/',
     repo: 'https://github.com/wricke/ze-code-challenge',
@@ -22,7 +23,7 @@ const Nav = () => {
   const iconColor = COLORS.light_gray
 
   return (
-    <nav css={styles.baseContainer}>
+    <nav css={[styles.baseContainer, containerStyle]}>
       <a aria-label={LABELS.in} href={LINKS.in} target="_blank" rel="noreferrer">
         <IconTooltip iconColor={iconColor} iconSize={iconsSize} iconName="AiFillLinkedin" text={LABELS.in} />
       </a>
@@ -34,6 +35,14 @@ const Nav = () => {
       </a>
     </nav>
   )
+}
+
+Nav.propTypes = {
+  containerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+}
+
+Nav.defaultProps = {
+  containerStyle: {},
 }
 
 export default Nav
