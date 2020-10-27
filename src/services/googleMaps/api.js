@@ -1,6 +1,4 @@
 import { __GOOGLEAPI__ as url } from 'config'
+import api from 'services/api'
 
-export default () => import('services/api')
-  .then((axios) => axios.create({
-    url,
-  }))
+export default () => api(url)
