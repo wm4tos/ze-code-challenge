@@ -1,6 +1,3 @@
-export default (api, { key, address }) => api.get('/', {
-  params: {
-    address,
-    key,
-  },
+export default (api, params) => api.get('json', {
+  params,
 })
