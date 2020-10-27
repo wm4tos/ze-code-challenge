@@ -26,6 +26,7 @@ export const content = css`
   grid-template-areas: "logo input input github";
   justify-items: center;
   ${mediaQueries({
+    margin: [`0 ${MARGIN_PADDING.large}px`, 0],
     display: ['flex', 'grid'],
     flexDirection: ['column'],
   })}
