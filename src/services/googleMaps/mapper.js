@@ -1,7 +1,9 @@
-export default ({ data, status }) => {
-  if (!/^OK$/.test(status)) throw new Error(status)
+export default ({
+  results, status, message, error_message: errorMessage,
+}) => {
+  if (!/^OK$/.test(status)) throw new Error(message || errorMessage)
 
-  return data.results[0]
+  return results[0]
 }
 
 export const getLatLong = (data) => data.geometry.location
