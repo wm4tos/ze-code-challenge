@@ -19,9 +19,9 @@ const MainTemplate = ({ children }) => {
   }, [debouncedAddress])
 
   return (
-    <div css={styles.containerBaseStyle}>
-      <Header onChange={setAddress} value={address} />
-      <main>
+    <div>
+      <Header containerStyle={styles.headerStyle} onChange={setAddress} value={address} />
+      <main css={styles.mainBaseStyle}>
         {children}
       </main>
     </div>
