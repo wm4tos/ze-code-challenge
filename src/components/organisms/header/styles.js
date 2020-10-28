@@ -7,12 +7,7 @@ import facepaint from 'facepaint'
 const mediaQueries = facepaint([`@media (min-width: ${SCREEN_SIZES.tablets - SCREEN_SIZES.minimum_width}px)`])
 
 export const headerBase = css`
-  top: 0;
-  left: 0;
-  right: 0;
   z-index: 10;
-  display: flex;
-  position: fixed;
   box-sizing: content-box;
   background-color: ${COLORS.black_menu};
   padding: ${MARGIN_PADDING.extra_large}px 0;
