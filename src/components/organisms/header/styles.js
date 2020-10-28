@@ -18,7 +18,7 @@ export const content = css`
   grid-template-columns: ${GRID.columns};
   grid-gap: ${GRID.gap}px;
   align-items: center;
-  grid-template-areas: "logo input input github";
+  grid-template-areas: ". logo input github .";
   justify-items: center;
   ${mediaQueries({
     margin: [`0 ${MARGIN_PADDING.large}px`, 0],
@@ -32,10 +32,11 @@ export const inputContainerStyle = css`
 `
 
 export const logoContainerStyle = css`
-  justify-self: center;
+  justify-self: flex-start;
   grid-area: logo;
 `
 
 export const githubCentralContainerStyle = css`
+  justify-self: flex-end;
   grid-area: github;
 `
