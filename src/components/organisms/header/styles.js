@@ -10,7 +10,6 @@ export const headerBase = css`
   z-index: 10;
   box-sizing: content-box;
   background-color: ${COLORS.black_menu};
-  padding: ${MARGIN_PADDING.extra_large}px 0;
 `
 
 export const content = css`
