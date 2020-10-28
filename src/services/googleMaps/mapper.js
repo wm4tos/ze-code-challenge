@@ -1,4 +1,4 @@
-export default ({
+export const fromGoogle = ({
   results, status, message, error_message: errorMessage,
 }) => {
   if (!/^OK$/.test(status)) throw new Error(message || errorMessage)
