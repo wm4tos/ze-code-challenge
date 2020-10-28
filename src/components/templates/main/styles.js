@@ -1,19 +1,14 @@
 import { css } from '@emotion/core'
-import { SCREEN_SIZES } from 'constants/theme'
-import facepaint from 'facepaint'
+import { MARGIN_PADDING } from 'constants/theme'
 
-const mediaQueries = facepaint([
-  `@media (max-width: ${SCREEN_SIZES.phones - SCREEN_SIZES.minimum_width}px)`,
-  `@media (min-width: ${SCREEN_SIZES.phones}px) and (max-width: ${SCREEN_SIZES.tablets
-  - SCREEN_SIZES.minimum_width}px)`,
-  `@media (min-width: ${SCREEN_SIZES.tablets}px) and (max-width: ${SCREEN_SIZES.desktops
-  - SCREEN_SIZES.minimum_width}px)`,
-  `@media (min-width: ${SCREEN_SIZES.desktops}px) and (max-width: ${SCREEN_SIZES.large_desktops}px)`,
-])
+const margin = `
+  padding: ${MARGIN_PADDING.extra_large}px 0;
+`
 
-export const containerBaseStyle = css`
-  ${mediaQueries({
-    maxWidth: [1200, '100%', '100%', '100%', 1200],
-    width: '100%',
-  })}
+export const headerStyle = css`
+  ${margin}
+`
+
+export const mainBaseStyle = css`
+  ${margin}
 `
