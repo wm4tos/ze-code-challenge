@@ -75,7 +75,7 @@ export const FONT_WEIGHT = {
 
 export const GRID = {
   gap: MARGIN_PADDING.tiny,
-  columns: '1fr 1fr 1fr 1fr',
+  columns: `${MARGIN_PADDING.extra_large * 2}px 1fr 4fr 1fr ${MARGIN_PADDING.extra_large * 2}px`,
 }
 
 export const ANIMATION_DURATION = 300
