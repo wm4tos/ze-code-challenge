@@ -1,10 +1,20 @@
 import 'normalize.css'
 
+import { ApolloProvider } from '@apollo/client'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
+import { client } from 'services/graphql'
 
-import App from './App'
 import store from './store'
+import App from './App'
 
-ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'))
+const renderApp = () => (
+  <Provider store={store}>
+    <ApolloProvider client={client}>
+      <App />
+    </ApolloProvider>
+  </Provider>
+)
+
+ReactDOM.render(renderApp(), document.getElementById('root'))
