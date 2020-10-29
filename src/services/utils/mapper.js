@@ -1,6 +1,6 @@
 import { capitalize } from './string'
 
-export const mapDeliveryTypes = ({ deliveryTypes }) => {
+export const mapDeliveryTypes = (deliveryTypes) => {
   const ICONS = {
     RECEBER: 'GoLocation',
     RETIRAR: 'AiFillCar',
