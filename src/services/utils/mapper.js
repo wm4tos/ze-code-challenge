@@ -17,6 +17,21 @@ export const mapDeliveryTypes = ({ deliveryTypes }) => {
   )
 }
 
+export const mapPaymentMethods = (paymentMethods) => {
+  const ICONS = {
+    'Crédito (Visa/Mastercard)': 'AiFillCreditCard',
+    'Débito (Visa/Mastercard)': 'AiFillCreditCard',
+    Dinheiro: 'FaMoneyBill',
+  }
+
+  return paymentMethods.map((paymentMethod) => ({
+    icon: ICONS[paymentMethod.title],
+    label: paymentMethod.subtitle,
+    key: paymentMethod.paymentMethodId,
+    ...paymentMethod,
+  }))
+}
+
 export const formatAddress = ({
   address1, city, number, province,
 }) => `${address1}, ${number}, ${city} - ${province}`
