@@ -9,7 +9,10 @@ export const getDeliveryTypes = ({ deliveryTypes }) => {
 
   return deliveryTypes.map(
     (deliveryType) => ({
-      icon: ICONS[deliveryType.title], label: capitalize(`${deliveryType.title} - ${deliveryType.subtitle}`), ...deliveryType,
+      icon: ICONS[deliveryType.title],
+      label: capitalize(`${deliveryType.title} - ${deliveryType.subtitle}`),
+      key: deliveryType.deliveryTypeId,
+      ...deliveryType,
     }),
   )
 }
