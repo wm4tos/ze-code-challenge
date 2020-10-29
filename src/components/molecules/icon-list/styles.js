@@ -1,9 +1,9 @@
 import { css } from '@emotion/core'
 
-export const listBaseStyle = css`
+export const getListBaseStyle = (justify) => css`
   list-style-type: none;
   display: flex;
-  justify-content: space-between;
+  justify-content: ${justify};
   padding: 0;
   margin: 0;
 `

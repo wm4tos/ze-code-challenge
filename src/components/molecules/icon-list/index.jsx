@@ -4,8 +4,8 @@ import React from 'react'
 
 import * as styles from './styles'
 
-const IconList = ({ items }) => (
-  <ul css={styles.listBaseStyle}>
+const IconList = ({ items, alignment }) => (
+  <ul css={styles.getListBaseStyle(alignment)}>
     {items.map((item) => (
       <li key={item.key}>
         <IconTooltip iconName={item.icon} text={item.label} position="top middle" />
@@ -19,6 +19,11 @@ IconList.propTypes = {
     label: PropTypes.string.isRequired,
     icon: PropTypes.string.isRequired,
   })).isRequired,
+  alignment: PropTypes.string,
+}
+
+IconList.defaultProps = {
+  alignment: 'space-between',
 }
 
 export default IconList
