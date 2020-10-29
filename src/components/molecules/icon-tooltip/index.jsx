@@ -7,10 +7,10 @@ import React from 'react'
 import * as styles from './styles'
 
 const IconTooltip = ({
-  iconName, iconSize, text, iconColor,
+  iconName, iconSize, text, iconColor, position,
 }) => (
   <div css={styles.iconTooltipBaseContainer}>
-    <Tooltip trigger={<Icon color={iconColor} name={iconName} size={iconSize} />}>
+    <Tooltip position={position} trigger={<Icon color={iconColor} name={iconName} size={iconSize} />}>
       {text}
     </Tooltip>
   </div>
@@ -21,11 +21,13 @@ IconTooltip.propTypes = {
   iconSize: PropTypes.number,
   text: PropTypes.string.isRequired,
   iconColor: PropTypes.string,
+  position: PropTypes.string,
 }
 
 IconTooltip.defaultProps = {
   iconSize: 16,
   iconColor: COLORS.black,
+  position: 'bottom middle',
 }
 
 export default IconTooltip
