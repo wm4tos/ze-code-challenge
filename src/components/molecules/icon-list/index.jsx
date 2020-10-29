@@ -4,21 +4,21 @@ import React from 'react'
 
 import * as styles from './styles'
 
-const DeliveryTypes = ({ types }) => (
+const IconList = ({ items }) => (
   <ul css={styles.listBaseStyle}>
-    {types.map((type) => (
-      <li key={type.deliveryTypeId}>
-        <IconTooltip iconName={type.icon} text={type.label} position="top middle" />
+    {items.map((item) => (
+      <li key={item.key}>
+        <IconTooltip iconName={item.icon} text={item.label} position="top middle" />
       </li>
     ))}
   </ul>
 )
 
-DeliveryTypes.propTypes = {
-  types: PropTypes.arrayOf(PropTypes.shape({
+IconList.propTypes = {
+  items: PropTypes.arrayOf(PropTypes.shape({
     label: PropTypes.string.isRequired,
     icon: PropTypes.string.isRequired,
   })).isRequired,
 }
 
-export default DeliveryTypes
+export default IconList
