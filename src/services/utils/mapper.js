@@ -13,3 +13,7 @@ export const getDeliveryTypes = ({ deliveryTypes }) => {
     }),
   )
 }
+
+export const formatAddress = ({
+  address1, city, number, province,
+}) => `${address1}, ${number}, ${city} - ${province}`
