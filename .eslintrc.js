@@ -30,6 +30,8 @@ module.exports = {
     }],
     'react/jsx-props-no-spreading': 'off',
     'import/no-extraneous-dependencies': ['error', { devDependencies: ['**/setupTests.js', '**/*.spec.jsx', '*.config.js'] }],
+    'import/named': 'off',
+    'linebreak-style': 'off',
   },
   env: {
     'jest/globals': true,
