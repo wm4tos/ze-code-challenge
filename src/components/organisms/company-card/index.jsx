@@ -1,5 +1,6 @@
 import Card from 'atoms/card'
 import IconList from 'molecules/icon-list'
+import PhoneLink from 'molecules/phone-link'
 import PropTypes from 'prop-types'
 import React from 'react'
 import {
@@ -16,6 +17,7 @@ const CompanyCard = ({ company }) => (
     <p css={styles.addressStyle}>{formatAddress(company.address)}</p>
     <IconList items={mapDeliveryTypes(company.deliveryTypes)} />
     <IconList items={mapPaymentMethods(company.paymentMethods)} />
+    <PhoneLink phoneNumber={company.phone.phoneNumber} />
   </Card>
 )
 
@@ -50,6 +52,9 @@ CompanyCard.propTypes = {
         title: PropTypes.string.isRequired,
       }),
     ),
+    phone: PropTypes.shape({
+      phoneNumber: PropTypes.string.isRequired,
+    }).isRequired,
   }).isRequired,
 }
 
