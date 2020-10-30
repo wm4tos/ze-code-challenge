@@ -5,10 +5,10 @@ import React from 'react'
 import * as styles from './styles'
 
 const PhoneLink = ({ iconName, phoneNumber }) => (
-  <a css={styles.anchorBaseStyle} href={`tel:${phoneNumber}`}>
+  <div css={styles.containerBaseStyle}>
     <Icon name={iconName} />
     <span>{phoneNumber}</span>
-  </a>
+  </div>
 )
 
 PhoneLink.propTypes = {

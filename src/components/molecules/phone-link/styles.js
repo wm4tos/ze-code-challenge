@@ -1,7 +1,5 @@
 import { css } from '@emotion/core'
-import { COLORS } from 'constants/theme'
 
-export const anchorBaseStyle = css`
+export const containerBaseStyle = css`
   display: flex;
-  color: ${COLORS.black};
 `
