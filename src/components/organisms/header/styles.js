@@ -10,6 +10,8 @@ export const headerBase = css`
   z-index: 10;
   box-sizing: content-box;
   background-color: ${COLORS.black_menu};
+  display: flex;
+  justify-content: center;
 `
 
 export const content = css`
@@ -17,10 +19,10 @@ export const content = css`
   grid-template-columns: ${GRID.columns};
   grid-gap: ${GRID.gap}px;
   align-items: center;
-  grid-template-areas: ". logo input github .";
+  grid-template-areas: "logo input github";
   justify-items: center;
   ${mediaQueries({
-    margin: [`0 ${MARGIN_PADDING.large}px`, 0],
+    margin: [`0 ${MARGIN_PADDING.large}px`, `0 ${MARGIN_PADDING.extra_large * 2}px`],
     display: ['flex', 'grid'],
     flexDirection: ['column'],
   })}
