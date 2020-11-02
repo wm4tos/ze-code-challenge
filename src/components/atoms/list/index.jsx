@@ -5,10 +5,10 @@ import { getProp } from 'services/utils/mapper'
 import * as styles from './styles'
 
 const List = ({
-  items, keyProp, Component, itemStyle,
+  items, keyProp, Component, itemStyle, itemMapper,
 }) => (
   <ul css={styles.listBaseStyle}>
-    {items.map((item) => (
+    {items.map(itemMapper).map((item) => (
       <li css={itemStyle} key={getProp(item)(keyProp)}>
         <Component {...item} />
       </li>
@@ -21,10 +21,12 @@ List.propTypes = {
   Component: PropTypes.oneOfType([PropTypes.node, PropTypes.element, PropTypes.func]).isRequired,
   keyProp: PropTypes.string.isRequired,
   itemStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  itemMapper: PropTypes.func,
 }
 
 List.defaultProps = {
   itemStyle: {},
+  itemMapper: (obj) => obj,
 }
 
 export default List
