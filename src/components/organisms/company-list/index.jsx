@@ -1,5 +1,5 @@
 import List from 'atoms/list'
-import CompanyCard, { CompanyCardProps } from 'organisms/company-card'
+import CompanyCard from 'organisms/company-card'
 import PropTypes from 'prop-types'
 import React from 'react'
 
@@ -15,7 +15,7 @@ const CompanyList = ({ companies }) => (
 )
 
 CompanyList.propTypes = {
-  companies: PropTypes.arrayOf(PropTypes.shape(CompanyCardProps)).isRequired,
+  companies: PropTypes.arrayOf(PropTypes.shape(CompanyCard.propTypes)).isRequired,
 }
 
 export default CompanyList

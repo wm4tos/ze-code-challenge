@@ -26,7 +26,7 @@ const CompanyCard = ({
   </Link>
 )
 
-export const CompanyCardProps = {
+CompanyCard.propTypes = {
   id: PropTypes.string.isRequired,
   officialName: PropTypes.string.isRequired,
   address: PropTypes.shape({
@@ -61,7 +61,5 @@ export const CompanyCardProps = {
     phoneNumber: PropTypes.string.isRequired,
   }).isRequired,
 }
-
-CompanyCard.propTypes = CompanyCardProps
 
 export default CompanyCard
