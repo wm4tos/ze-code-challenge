@@ -4,7 +4,7 @@ import {
 } from 'constants/theme'
 import facepaint from 'facepaint'
 
-const mediaQueries = facepaint([`@media (min-width: ${SCREEN_SIZES.phones - SCREEN_SIZES.minimum_width}px)`])
+const mediaQueries = facepaint([`@media (min-width: ${SCREEN_SIZES.tablets - SCREEN_SIZES.minimum_width}px)`])
 
 export const inputBaseContainer = css`
   width: 100%;
@@ -14,7 +14,6 @@ export const inputBaseContainer = css`
 `
 
 export const inputBaseStyle = css`
-  width: 100%;
   height: 48px;
   border-width: 1px;
   border-radius: 8px;
@@ -28,9 +27,6 @@ export const inputBaseStyle = css`
   border: 1px solid ${COLORS.c_gray};
   padding-left: ${MARGIN_PADDING.large}px;
   padding-right: ${MARGIN_PADDING.large}px;
-  ${mediaQueries({
-    margin: ['auto', 'unset'],
-  })};
 
   ::placeholder {
     color: ${COLORS.dark_gray};
