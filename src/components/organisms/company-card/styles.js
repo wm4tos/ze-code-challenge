@@ -2,7 +2,7 @@ import { css } from '@emotion/core'
 import { COLORS, FONT_SIZES } from 'constants/theme'
 
 export const cardStyle = css`
-  max-width: 150px;
+  max-width: 100%;
 `
 
 export const titleStyle = css`
