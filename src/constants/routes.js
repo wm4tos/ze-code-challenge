@@ -1,5 +1,7 @@
 import Home from 'pages/home'
 
 export const ROUTES = [
-  { key: 'home', path: '/', component: Home },
+  {
+    key: 'home', path: '/', exact: true, component: Home,
+  },
 ]
