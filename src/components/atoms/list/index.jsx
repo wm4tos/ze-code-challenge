@@ -19,7 +19,7 @@ const List = ({
 List.propTypes = {
   items: PropTypes.arrayOf(PropTypes.object).isRequired,
   Component: PropTypes.oneOfType([PropTypes.node, PropTypes.element, PropTypes.func]).isRequired,
-  keyProp: PropTypes.string.isRequired,
+  keyProp: PropTypes.string,
   itemStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   containerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   itemMapper: PropTypes.func,
@@ -29,6 +29,7 @@ List.defaultProps = {
   itemStyle: {},
   itemMapper: (obj) => obj,
   containerStyle: {},
+  keyProp: 'key',
 }
 
 export default List
