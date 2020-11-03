@@ -3,7 +3,6 @@ import IconList from 'molecules/icon-list'
 import PhoneLink from 'molecules/phone-link'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { Link } from 'react-router-dom'
 import {
   formatAddress,
   mapDeliveryTypes,
@@ -13,9 +12,9 @@ import {
 import * as styles from './styles'
 
 const CompanyCard = ({
-  id, officialName, address, deliveryTypes, paymentMethods, phone,
+  officialName, address, deliveryTypes, paymentMethods, phone,
 }) => (
-  <Link css={styles.cardStyle} to={`/company/${id}`}>
+  <div css={styles.cardStyle}>
     <Card containerStyle={styles.cardStyle}>
       <h1 css={styles.titleStyle}>{officialName}</h1>
       <p css={styles.addressStyle}>{formatAddress(address)}</p>
@@ -23,11 +22,10 @@ const CompanyCard = ({
       <IconList items={mapPaymentMethods(paymentMethods)} />
       <PhoneLink phoneNumber={phone.phoneNumber} />
     </Card>
-  </Link>
+  </div>
 )
 
 CompanyCard.propTypes = {
-  id: PropTypes.string.isRequired,
   officialName: PropTypes.string.isRequired,
   address: PropTypes.shape({
     address1: PropTypes.string.isRequired,
