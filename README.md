@@ -18,7 +18,6 @@ The technologies used in the application are:
 1. Create a `.env` file with the `example.env` file
     ### Exemplo de arquivo
     ```
-      __API__=https://api.code-challenge.ze.delivery/public/graphql
       __GOOGLEAPI__=https://maps.googleapis.com/maps/api/geocode
       __GOOGLEKEY__=google_key
       NODE_ENV=development
